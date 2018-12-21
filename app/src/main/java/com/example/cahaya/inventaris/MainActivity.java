@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements InventarisAdapter
         rvInvent.setVisibility(View.INVISIBLE);
         pbInvent.setVisibility(View.VISIBLE);
 
-     //if(isConnected()) {
+     if(isConnected()) {
             Toast.makeText(MainActivity.this,"Connection Established",Toast.LENGTH_LONG).show();
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl("https://inventaris.herokuapp.com/")
@@ -114,15 +114,15 @@ public class MainActivity extends AppCompatActivity implements InventarisAdapter
             rvInvent.setAdapter(adapter);
 
             pbInvent.setVisibility(View.INVISIBLE);
-            rvInvent.setVisibility(View.VISIBLE);
+            rvInvent.setVisibility(View.VISIBLE);*/
 
-        }*/
+        }
 
         @Override
         public void click(Inventaris m) {
-           /* Intent detailActivityIntent = new Intent(this, DetailActivity.class);
+           Intent detailActivityIntent = new Intent(this, DetailActivity.class);
             detailActivityIntent.putExtra("movie_extra_key", m);
-            startActivity(detailActivityIntent);*/
+            startActivity(detailActivityIntent);
         }
 
         public Boolean isConnected(){
